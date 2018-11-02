@@ -23,35 +23,22 @@
           <option id="large" value="Large">Large</option>
         </select>
       </div>
-      <h2>Please choose topping for your pizza:</h2>
-      <div class="radio">
-        <label>
-          <input type="radio" name="topping" value="cheese" checked>
-          Cheese
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="topping" value="veggie">
-          Veggie
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="topping" value="chicken">
-          Chicken
-        </label>
-        <div class="radio">
-          <label>
-            <input type="radio" name="topping" value="pepperoni">
-            Pepperoni
-          </label>
-        </div>
+      <!-- <h2>Please choose toppings for your pizza:</h2> -->
+      <div class="form-group">
+         <div class="topping">
+         <p>Please choose toppings for your pizza:</p>
+         <input type="checkbox" name="topping" value="cheese">Cheese.<br>
+         <input type="checkbox" name="topping" value="chicken">Chicken.<br>
+         <input type="checkbox" name="topping" value="pepperoni">Pepperoni.<br>
+         <input type="checkbox" name="topping" value="artichoke">Artichoke.<br>
+         <input type="checkbox" name="topping" value="anchovi">Anchovi.<br>
+       </div>
+     </div>
         <button type="submit" class="btn btn-info">Order here</button>
       </form><br><hr>
 
       <div id="show-price">
-        <p>You ordered: <strong><span class="size"></span> <span class="topping"></span></strong> pizza</p>
+        <p>You ordered: <strong><span class="size"></strong> pizza with </span> <span class="toppings"></span>.</p>
       </div>
       <div id="output">
       </div>
