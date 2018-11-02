@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
-  </script>
-  <title>Order pizza</title>
+</script>
+<title>Order pizza</title>
 </head>
-
 <body>
   <div class="container">
-    <h1>Order Pizza</h1>
+    <div class="jumbotron">
+      <h1>Order Pizza</h1>
+    </div>
+    <form id="pizza">
+      <div class="form-group">
+        <label for="size">Please choose a size:</label>
+        <select id="size" class="form-control" type="text">
+          <option></option>
+          <option id="small" value="small">Small</option>
+          <option id="medium" value="medium">Medium</option>
+          <option id="large" value="large">Large</option>
+        </select>
+      </div>
+      <h2>Please choose topping for your pizza:</h2>
+      <div class="radio">
+        <label>
+          <input type="radio" name="topping" value="cheese" checked>
+          Cheese
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="topping" value="veggie">
+          Veggie
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="topping" value="Chicken">
+          Chicken
+        </label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="topping" value="pepperoni">
+            Pepperoni
+          </label>
+      </div>
+      <button type="submit" class="btn btn-info">Order here</button>
+
+    </form>
+
+  <div id="output">
+
+  </div>
 
   </div>
 </body>
