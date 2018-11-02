@@ -1,4 +1,5 @@
 // Business Logic
+
 function Pizza(size, topping) {
   this.size = size,
   this.toppings = topping
@@ -7,9 +8,9 @@ function Pizza(size, topping) {
 Pizza.prototype.getPrice = function() {
   var price = 0;
   if (this.size === "Small") {
-    if (this.toppings.length <= 2) {
+    if (this.toppings.length <= 3) {
       price = 5.00;
-    } else if (this.toppings.length ===3) {
+    } else if (this.toppings.length ===4) {
       price = 6.50;
     }
     else {
@@ -17,18 +18,18 @@ Pizza.prototype.getPrice = function() {
     }
   }
   else if (this.size === "Medium") {
-    if (this.toppings.length <= 2) {
+    if (this.toppings.length <= 3) {
       price = 6.00;
-    } else if (this.toppings.length ===3) {
+    } else if (this.toppings.length ===4) {
       price = 7.19;
     } else  {
       price = 9.17;
     }
   }
   else if (this.size === "Large") {
-    if (this.toppings.length <= 2) {
+    if (this.toppings.length <= 3) {
       price = 7.12;
-    } else if (this.toppings.length ===3) {
+    } else if (this.toppings.length ===4) {
       price = 8.00;
     } else {
       price = 10.39;
@@ -42,12 +43,11 @@ $(document).ready(function() {
   $("form#pizza").submit(function(event) {
     event.preventDefault();
     var selectedSize = $("#size").attr('selected',true).val();
-
     var toppingList = [];
     $("input:checkbox[name=topping]:checked").each(function(){
-       var selectedToppings = $(this).val();
-       toppingList.push(selectedToppings);
-     });
+      var selectedTopping = $(this).val();
+      toppingList.push(selectedTopping);
+    });
 
     $("#size").val("");
 
