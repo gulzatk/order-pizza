@@ -18,9 +18,9 @@
         <label for="size">Please choose a size:</label>
         <select id="size" class="form-control" type="text">
           <option></option>
-          <option id="small" value="small">Small</option>
-          <option id="medium" value="medium">Medium</option>
-          <option id="large" value="large">Large</option>
+          <option id="small" value="Small">Small</option>
+          <option id="medium" value="Medium">Medium</option>
+          <option id="large" value="Large">Large</option>
         </select>
       </div>
       <h2>Please choose topping for your pizza:</h2>
@@ -46,19 +46,17 @@
             <input type="radio" name="topping" value="pepperoni">
             Pepperoni
           </label>
-      </div>
-      <button type="submit" class="btn btn-info">Order here</button>
-
-    </form><br><hr>
+        </div>
+        <button type="submit" class="btn btn-info">Order here</button>
+      </form><br><hr>
 
       <div id="show-price">
-      <p>You ordered:></p>
-      <p><span class="size">pizza with <span class="topping"></span></p>
+        <p>You ordered: <strong><span class="size"></span> <span class="topping"></span></strong> pizza</p>
+      </div>
+      <div id="output">
+      </div>
+
     </div>
-    <div id="output">
-  </div>
+  </body>
 
-  </div>
-</body>
-
-</html>
+  </html>

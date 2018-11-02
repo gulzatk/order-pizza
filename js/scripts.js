@@ -6,16 +6,16 @@ function Pizza(size, topping) {
 
 Pizza.prototype.getPrice = function() {
   var price = 0;
-  if (this.size === "small") {
+  if (this.size === "Small") {
     if (this.toppings === "cheese" || this.toppings === "veggie") {
       price = 6.39;
     } else if (this.toppings === "chicken") {
       price = 7.50;
     } else {
-      price = 8.00;
+      price = 8.17;
     }
   }
-  else if (this.size === "medium") {
+  else if (this.size === "Medium") {
     if (this.toppings === "cheese" || this.toppings === "veggie") {
       price = 7.39;
     } else if (this.toppings === "chicken") {
@@ -24,13 +24,13 @@ Pizza.prototype.getPrice = function() {
       price = 9.00;
     }
   }
-  else if (this.size === "large") {
+  else if (this.size === "Large") {
     if (this.toppings === "cheese" || this.toppings === "veggie") {
       price = 8.39;
     }  else if (this.toppings === "chicken") {
       price = 9.50;
     }  else {
-      price = 10.00;
+      price = 10.68;
     }
   }
   return price;
@@ -53,6 +53,6 @@ $(document).ready(function() {
     $(".topping").html(selectedTopping);
 
     var price = newPizza.getPrice();
-    $("#output").text(price);
+    $("#output").html("Your total price is: $" + price);
   });
 });
