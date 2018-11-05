@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Order pizza</title>
-  </head>
-  <body>
-    <div class="container">
-      <br>
-      <h1>Pizza House</h1>
-      <h3>Order your own build pizza</h3>
-      <br><br><br>
-      <div class="row">
-        <div class="col-md-6">
-          <form id="pizza">
-            <div class="form-group">
-              <label for="size">Please choose a size: </label>
-              <select id="size" class="form-control" type="text">
-                <option></option>
-                <option id="small" value="Small">Small</option>
-                <option id="medium" value="Medium">Medium</option>
-                <option id="large" value="Large">Large</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <div class="topping">
-                <div class="row">
-                  <div class="col-md-5">
-                    <p>Veggie topping options:</p>
-                    <input type="checkbox" name="topping" value="cheese">Cheese.<br>
-                    <input type="checkbox" name="topping" value="pepper">Pepper.<br>
-                    <input type="checkbox" name="topping" value="spinach">Spinach.<br>
-                    <input type="checkbox" name="topping" value="artichoke">Artichoke.<br>
-                    <input type="checkbox" name="topping" value="anchovi">Anchovi.<br>
-                  </div>
-                  <div class="col-md-5">
-                    <p>Meat topping options:</p>
-                    <input type="checkbox" name="topping" value="fish">Fish (smoked salmon).<br>
-                    <input type="checkbox" name="topping" value="chicken">Chicken.<br>
-                    <input type="checkbox" name="topping" value="pepperoni">Pepperoni.<br>
-                  </div>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Order pizza</title>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <h1>Pizza House</h1>
+    <h3>Order your own build pizza</h3>
+    <br><br><br>
+    <div class="row">
+      <div class="col-md-5">
+        <form id="pizza">
+          <div class="form-group">
+            <label for="size">Please choose a size: </label>
+            <select id="size" class="form-control" type="text">
+              <option id="small" value="Small">Small</option>
+              <option id="medium" value="Medium">Medium</option>
+              <option id="large" value="Large">Large</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="topping">
+              <div class="row">
+                <div class="col-md-5">
+                  <p>Veggie topping options:</p>
+                  <input type="checkbox" name="topping" value="cheese">Cheese.<br>
+                  <input type="checkbox" name="topping" value="pepper">Pepper.<br>
+                  <input type="checkbox" name="topping" value="spinach">Spinach.<br>
+                  <input type="checkbox" name="topping" value="artichoke">Artichoke.<br>
+                  <input type="checkbox" name="topping" value="anchovi">Anchovi.<br>
+                </div>
+                <div class="col-md-5">
+                  <p>Meat topping options:</p>
+                  <input type="checkbox" name="topping" value="fish">Fish (smoked salmon).<br>
+                  <input type="checkbox" name="topping" value="chicken">Chicken.<br>
+                  <input type="checkbox" name="topping" value="pepperoni">Pepperoni.<br>
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-info">Order here</button>
-          </form><br>
-        </div><hr>
-        <div class="col-md-6">
-          <div id="show-price">
-            <p>You ordered: <strong><span class="size"></strong> pizza with </span> <span class="toppings"></span>.</p>
-            <div id="output">
-            </div>
           </div>
+          <button type="submit" class="btn btn-info">Order here</button>
+        </form><br>
+      </div>
+      <hr>
+      <div class="col-md-6">
+        <h2>Your Cart</h2>
+        <div id="total-price"></div>
+        <ul id="pizzas">
+        </ul>
+        <div id="pizza-details">
+        </div>
+        <div id="delete-button">
+        </div>
+        <div id="orderButton">
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
